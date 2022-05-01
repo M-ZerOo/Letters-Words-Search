@@ -17,7 +17,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    // For Navigation Component
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -26,7 +25,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.melfouly.wordsapp"
+        applicationId "com.example.wordsapp"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -56,18 +55,15 @@ android {
 }
 
 dependencies {
-    //noinspection GradleDependency
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    //noinspection GradleDependency
     implementation "androidx.core:core-ktx:$core_ktx_version"
-    //noinspection GradleDependency
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    //noinspection GradleDependency
     implementation "com.google.android.material:material:$material_version"
-    //noinspection GradleDependency
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    //For Navigation Component
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
 }
